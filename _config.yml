@@ -1,0 +1,130 @@
+---
+title: Demo Event
+description: This is some informative description for the demo event. 
+short-description: A short description for the demo event. 
+url: https://learnwithclyde.github.io
+baseurl: ''
+collections:
+  teams:
+    sort_by: sort_order
+navbar-links:
+  About: about
+  Events: events
+  Nonprofits: nonprofits
+  Sponsors: sponsors
+  Contact: contact
+title-img: "/uploads/demoevent.png"
+share-img: "/uploads/demoevent-siteteaser.jpg"
+navbar-col: "#ffffff"
+navbar-text-col: "#404040"
+navbar-children-col: "#ffffff"
+page-col: "#FFFFFF"
+link-col: "#654f00"
+hover-col: "#dd1144"
+footer-col: "#dd1144"
+footer-text-col: "#ffffff"
+footer-link-col: "#ffffff"
+author:
+  name: Demo Event
+  twitter: demoevent
+social-network-links:
+  facebook: demoevent
+  github: demoevent
+  twitter: demoevent
+  linkedin: demoevent
+  instagram: demoevent
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
+formspree: true
+freshdesk: true
+gtag: UA-XXYFXX-D
+fb_app_id: "ID HERE"
+excerpt_length: "50"
+title-separator: "-"
+date_format: "%B %-d, %Y"
+timezone: America/Vancouver
+markdown: kramdown
+highlighter: rouge
+permalink: "/:year-:month-:day-:title/"
+paginate: "5"
+kramdown:
+  input: GFM
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    comments: true
+    social-share: true
+- scope:
+    path: ''
+  values:
+    layout: page
+    show-avatar: true
+link-tags: true
+exclude:
+- CHANGELOG.md
+- CNAME
+- Dockerfile
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- Vagrantfile
+- vendor/bundle
+prose:
+  rooturl: _posts
+  media: img
+  ignore:
+  - 404.html
+  - LICENSE
+  - feed.xml
+  - _config.yml
+  - "/_layouts"
+  - "/_includes"
+  - "/css"
+  - "/img"
+  - "/js"
+  metadata:
+    _posts:
+    - name: layout
+      field:
+        element: hidden
+        value: post
+    - name: title
+      field:
+        element: text
+        label: Post title
+        placeholder: Title
+        alterable: true
+    - name: subtitle
+      field:
+        element: textarea
+        label: Subtitle
+        placeholder: A description of your post.
+        alterable: true
+    - name: date
+      field:
+        element: text
+        label: Date
+        help: Enter date of post.
+        placeholder: yyyy-mm-dd
+        alterable: true
+    - name: image
+      field:
+        element: text
+        label: Image
+        help: Add a thumbnail image to your post.
+        placeholder: Thumbnail
+        alterable: true
+    - name: published
+      field:
+        element: checkbox
+        label: Publish
+        help: Check to publish post, uncheck to hide.
+plugins:
+- jekyll-paginate
+- jekyll-sitemap

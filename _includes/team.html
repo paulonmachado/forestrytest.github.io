@@ -1,0 +1,20 @@
+<div class="team-list">
+  {% for post in site.teams | sort: "sort_order" %}
+        <div class="team-member">
+          <div class="col-md-2 col-sm-2 col-xs-4">
+            <img class="img-responsive img-circle" src="{{ post.profile_picture | relative_url }}" alt="{{ post.full_name }}">
+          </div>
+          
+          <div class="col-md-4 col-sm-4 col-xs-8">
+            <h3 class="team-name">{{ post.full_name }}</h3>
+            <div class="team-role">{{ post.role }}</div>
+            <div class="team-social">
+              {% if post.linkedin_url %}
+                <a href="{{ post.linkedin_url }}" title="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+  
+  {% endfor %}
+</div>

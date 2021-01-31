@@ -1,0 +1,125 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+  <meta name="author" content="{{ site.author.name }}" />
+  <meta name="msvalidate.01" content="63710CC681F67BFE5C5BFB91B14C8120" />
+
+  {%- comment -%} PAGE TITLE {%- endcomment -%}
+  {%- comment -%} ========== {%- endcomment -%}
+  {%- assign page_title="" -%}
+  {%- if page.use-site-title -%}
+    {%- capture page_title -%}{{ site.title }} {{ site.title-separator }} {{ site.short-description }}{%- endcapture -%}
+  {%- elsif page.title -%}
+    {%- capture page_title -%}{{ page.title }} {{ site.title-separator }} {{ site.title }}{%- endcapture -%}
+  {%- elsif page.meta-title -%}
+    {%- capture page_title -%}{{ page.meta-title }} {{ site.title-separator }} {{ site.title }}{%- endcapture -%}
+  {%- else -%}
+    {%- capture page_title -%}{{ site.title }}{%- endcapture -%}
+  {%- endif -%}
+  
+  {%- comment -%} PAGE DESCRIPTION {%- endcomment -%}
+  {%- comment -%} ================ {%- endcomment -%}
+  {%- assign page_description="" -%}
+  {%- if page.use-site-title -%}
+    {%- capture page_description -%}{{ site.description }}{%- endcapture -%}
+  {%- elsif page.meta-description -%}
+    {%- capture page_description -%}{{ page.meta-description }}{%- endcapture -%}
+  {%- elsif page.subtitle -%}
+    {%- capture page_description -%}{{ page.subtitle }}{%- endcapture -%}
+  {%- else -%}
+    {%- capture page_description -%}{{ site.description }}{%- endcapture -%}
+  {%- endif -%}  
+  
+  {%- comment -%} PAGE IMAGE {%- endcomment -%}
+  {%- comment -%} ========== {%- endcomment -%}
+  {%- assign page_share_image="" -%}
+  {%- if page.share-img -%}
+    {%- capture page_share_image -%}{{ page.share-img | absolute_url }}{%- endcapture -%}
+  {%- elsif site.avatar -%}
+    {%- capture page_share_image -%}{{ site.avatar | absolute_url }}{%- endcapture -%}
+  {%- else -%}
+    {%- capture page_share_image -%}{{ site.share-img | absolute_url }}{%- endcapture -%}
+  {%- endif -%}
+  
+  {%- comment -%} PAGE URL {%- endcomment -%}
+  {%- comment -%} ======== {%- endcomment -%}
+  {%- assign page_url="" -%}
+  {%- if page.id -%}
+    {%- capture page_url -%}{{ page.url | absolute_url }}{%- endcapture -%}
+  {%- else -%}
+    {%- capture page_url -%}{{ page.url | absolute_url | strip_index }}{%- endcapture -%}
+  {%- endif -%}
+  
+  <title>{{ page_title }}</title> 
+  <meta name="description" content="{{ page_description }}">
+  <meta property="og:title" content="{{ page_title }}" />
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ page_url }}" />
+  <link rel="canonical" href="{{ page_url }}" />
+  <meta property="og:image" content="{{ page_share_image }}" />
+  
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@{{ site.author.twitter }}" />
+  <meta name="twitter:creator" content="@{{ site.author.twitter }}" />
+  <meta name="twitter:title" content="{{ page_title }}" />
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ page_share_image }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ page_title }}" href="{{ '/feed.xml' | absolute_url }}" />
+
+  {%- if site.fb_app_id -%}
+  <meta property="fb:app_id" content="{{ site.fb_app_id }}" />
+  {%- endif -%}
+  
+  {%- include gtag.html -%}
+  {%- include gtm_head.html -%}
+  {%- include google_analytics.html -%}
+
+  {%- if layout.common-ext-css -%}
+    {%- for css in layout.common-ext-css -%}
+      {%- include ext-css.html css=css -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- if layout.common-css -%}
+    {%- for css in layout.common-css -%}
+      <link rel="stylesheet" href="{{ css | relative_url }}" />
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- if layout.common-googlefonts -%}
+    {%- for font in layout.common-googlefonts -%}
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ font }}" />
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- if page.ext-css -%}
+    {%- for css in page.ext-css -%}
+      {%- include ext-css.html css=css -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- if page.css -%}
+    {%- for css in page.css -%}
+      <link rel="stylesheet" href="{{ css | relative_url }}" />
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- if page.googlefonts -%}
+    {%- for font in page.googlefonts -%}
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ font }}" />
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- if site.matomo -%}
+  {%- include matomo.html -%}
+  {%- endif -%}
+
+  {%- if page.comments and site.staticman.repository and site.staticman.branch -%}
+  <!-- Staticman -->
+  <link rel="stylesheet" href="{{ "/css/staticman.css" | relative_url }}" />
+  {%- endif -%}
+
+</head>

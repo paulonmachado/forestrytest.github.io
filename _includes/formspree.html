@@ -1,0 +1,19 @@
+{% if site.formspree %}
+<form action="https://formspree.io/DEMO" method="POST">
+  <label>
+    Name:
+    <input type="text" id="contact-fullname" name="name" maxlength="80" required>
+  </label>
+  <label>
+    Your email:
+    <input type="email" id="contact-email" name="_replyto" required>
+  </label>
+  <label>
+    Your message:
+    <textarea id="contact-message" name="message" required></textarea>
+  </label>
+  <input type="hidden" name="_subject" value="Contact Us" />
+  <br/><small>All fields are required</small><br/>
+  <input type="submit" value="Send" class="lnsnpo-active-button">
+</form>
+{% endif %}
