@@ -14,3 +14,5 @@ meta-description: Insert meta description for this page here.
 ## About us
 
 Feel free to insert some **useful content** here. Meet the team [here](/team).
+
+[750x250](https://via.placeholder.com/750x250 "750x250")
