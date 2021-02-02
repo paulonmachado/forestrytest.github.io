@@ -11,4 +11,6 @@ team: false
 meta-description: Insert meta description for this page here.
 
 ---
-Feel free to insert some useful content here. Meet the team [here](/team).
+## About us
+
+Feel free to insert some **useful content** here. Meet the team [here](/team).
