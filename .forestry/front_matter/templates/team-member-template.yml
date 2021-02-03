@@ -1,0 +1,22 @@
+---
+label: Team member template
+hide_body: true
+fields:
+- type: text
+  name: full_name
+  label: full_name
+- type: text
+  name: role
+  label: role
+- type: file
+  name: profile_picture
+  label: profile_picture
+- type: text
+  name: linkedin_url
+  label: linkedin_url
+- type: text
+  name: category
+  label: category
+- type: text
+  name: sort_order
+  label: sort_order
