@@ -35,4 +35,4 @@ fields:
   name: meta-description
   label: Meta Description
 pages:
-- _posts/event-two.md
+- _posts/2021-02-03-event-two.md
