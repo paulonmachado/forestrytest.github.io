@@ -1,0 +1,34 @@
+---
+label: Public page template
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: subtitle
+  label: subtitle
+- type: file
+  name: bigimg
+  label: bigimg
+- type: boolean
+  name: formspree
+  label: formspree
+- type: boolean
+  name: include-past-events
+  label: include-past-events
+- type: boolean
+  name: include-upcoming-events
+  label: include-upcoming-events
+- type: boolean
+  name: use-site-title
+  label: use-site-title
+- type: boolean
+  name: team
+  label: team
+- type: text
+  name: meta-description
+  label: meta-description
