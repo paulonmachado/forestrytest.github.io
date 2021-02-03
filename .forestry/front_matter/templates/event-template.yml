@@ -2,9 +2,20 @@
 label: Event template
 hide_body: false
 fields:
-- type: text
-  name: category
-  label: category
+- name: category
+  type: select
+  default: Past events
+  config:
+    required: true
+    options:
+    - Past events
+    - Upcoming events
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
 - type: text
   name: layout
   label: layout
@@ -20,12 +31,6 @@ fields:
 - type: list
   name: tags
   label: tags
-- type: datetime
-  name: event-test-date
-  label: event-test-date
-- type: text
-  name: event_date
-  label: event_date
 - type: text
   name: meta-description
-  label: meta-description
+  label: Meta Description
