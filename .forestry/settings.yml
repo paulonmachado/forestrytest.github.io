@@ -34,6 +34,10 @@ sections:
   label: Widgets
   create: documents
   match: "**/*.html"
+- type: document
+  path: _data/SocialNetworks.yml
+  label: Social media settings
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
