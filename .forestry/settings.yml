@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: ".learnwithclyde/dashboard.md"
+  label: Dashboard
+  match: "**/*"
+  read_only: true
 - type: jekyll-pages
   label: Public pages
   create: all
