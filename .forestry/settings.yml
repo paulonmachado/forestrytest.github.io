@@ -29,6 +29,11 @@ sections:
   - team-member-template
 - type: heading
   label: Developer content
+- type: directory
+  path: _includes
+  label: Widgets
+  create: documents
+  match: "**/*.html"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
