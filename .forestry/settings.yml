@@ -5,14 +5,14 @@ admin_path:
 webhook_url: 
 sections:
 - type: jekyll-pages
-  label: Pages
+  label: Public pages
   create: all
 - type: jekyll-posts
-  label: Posts
+  label: Events
   create: all
 - type: directory
   path: _teams
-  label: Teams
+  label: Team
   create: all
   match: "**/*"
 upload_dir: uploads
