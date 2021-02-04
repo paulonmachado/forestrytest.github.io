@@ -7,8 +7,9 @@ sections:
 - type: document
   path: ".learnwithclyde/dashboard.md"
   label: Dashboard
-  match: "**/*"
   read_only: true
+- type: heading
+  label: Site content
 - type: jekyll-pages
   label: Public pages
   create: all
