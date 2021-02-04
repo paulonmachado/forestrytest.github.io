@@ -27,6 +27,8 @@ sections:
   match: "**/*"
   templates:
   - team-member-template
+- type: heading
+  label: Developer content
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
