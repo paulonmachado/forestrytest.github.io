@@ -7,14 +7,20 @@ sections:
 - type: jekyll-pages
   label: Public pages
   create: all
+  templates:
+  - public-page-template
 - type: jekyll-posts
   label: Events
   create: all
+  templates:
+  - event-template
 - type: directory
   path: _teams
   label: Team
   create: all
   match: "**/*"
+  templates:
+  - team-member-template
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
