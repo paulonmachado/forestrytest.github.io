@@ -1,3 +1,11 @@
+> ## Note
+> Check out my online class Learn Forestry: A Git-Based CMS on [Udemy](http://bit.ly/clyded05-udemy) or [Skillshare](http://bit.ly/clyded05).
+
+[![Online class on Udemy](https://img.shields.io/static/v1?label=Purchase%20this%20class%20on%20&message=Udemy&color=EC5252&logo=udemy)](http://bit.ly/clyded05-udemy)
+[![Online class on Skillshare](https://img.shields.io/static/v1?label=Watch%20this%20class%20on%20&message=Skillshare&color=00FF84&logo=skillshare)](http://bit.ly/clyded05)
+
+---
+
 # Beautiful Jekyll
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/daattali/20)
